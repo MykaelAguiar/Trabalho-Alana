@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="shortcut icon" href="img/Valley.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <header>
+        <div class="navbar">
+            <div class="valley">
+            <img src="Imagens/Valley.png" alt="" style="height: 30px;">
+            <div class="logo"><a href="index.html">Valley</a></div>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+            
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="Menu.html" class="action_btn">Baixar nosso aplicativo</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="principal">
+            <h1 style="color: rgb(255, 17, 164);">Bem-vindo ao Valley</h1>
+            <p>Seu Site de informações sobre o <div id="brasil">Brasil</div></p>
+        </section>
+    </main>
+
+    <div id="background">
+        <video loop autoplay muted>
+            <source src="Imagens/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <section>
+        <div class="container1">
+            <div class="card">
+                <h1 class="titles">Max Vestappen supera Norris, e já esta com a mão na tarça</h1>
+                <img src="Imagens/1.jpg" alt="" id="borde1">
+            </div>
+            <div class="card">
+                <h1 class="titles">Flamengo Goleia Atlético Mg no maracãna</h1>
+                <img src="Imagens/2.webp" alt="">
+            </div>
+            <div class="card">
+                <h1 class="titles">Ameaças Venezuelanas ao Brasil?</h1>
+                <img src="Imagens/3.jpg" alt="">
+            </div>
+            <div class="card"><a href="Noticia.html">
+                <h1 class="titles">Alunos do Curso de Meio Ambiente do CEEP Apontam Problemas na Sustentabilidade dos Recursos Hídricos</h1>
+                <img src="Imagens/4.webp" alt="">
+            </a></div>
+        </div>
+    </section>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const IsOpen= dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = IsOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+</html>
